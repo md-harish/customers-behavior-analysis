@@ -17,13 +17,16 @@ Build a complete, presentable analytics pipeline: clean and structure raw shoppi
 
 ```
 Customer Shopping Behavior Analysis/
+├── powerbi/
+│   └── Customers Analysis Dashboard.pbix
 ├── python/
-│   └── project.ipynb
-├── customer_shopping_behavior_analysis.sql
-├── Customers Analysis Dashboard.pbix
-├── Customer_Shopping_Behavior_Report.docx
-├── screenshots/
-│   └── dashboard.png
+│   └── customer_behavior_analysis.ipynb
+├── reports/
+│   ├── Customer_Shopping_Behavior_Report.docx
+│   └── screenshots/
+│       └── dashboard.png
+├── sql/
+│   └── customer_behavior_analysis.sql
 └── README.md
 ```
 
@@ -31,11 +34,11 @@ Customer Shopping Behavior Analysis/
 
 | File | Description |
 |---|---|
-| `python/project.ipynb` | Data cleaning, standardization, and feature engineering in pandas |
-| `customer_shopping_behavior_analysis.sql` | SQL queries: exploration, revenue/spending, customer loyalty, window functions, CTEs & subqueries, discounts/shipping/payment |
-| `Customers Analysis Dashboard.pbix` | Power BI dashboard (Customer Behavior Dashboard) |
-| `Customer_Shopping_Behavior_Report.docx` | Full write-up of the project, methodology, and findings |
-| `screenshots/` | Dashboard screenshots referenced below |
+| `python/customer_behavior_analysis.ipynb` | Data cleaning, standardization, and feature engineering in pandas |
+| `sql/customer_behavior_analysis.sql` | SQL queries: exploration, revenue/spending, customer loyalty, window functions, CTEs & subqueries, discounts/shipping/payment |
+| `powerbi/Customers Analysis Dashboard.pbix` | Power BI dashboard (Customer Behavior Dashboard) |
+| `reports/Customer_Shopping_Behavior_Report.docx` | Full write-up of the project, methodology, and findings |
+| `reports/screenshots/` | Dashboard screenshots referenced below |
 
 ## Data Preparation
 
@@ -49,7 +52,7 @@ Customer Shopping Behavior Analysis/
 
 ## SQL Analysis
 
-Queries in `customer_shopping_behavior_analysis.sql` cover:
+Queries in `sql/customer_behavior_analysis.sql` cover:
 - Basic exploration and category breakdowns
 - Revenue and spending by category, age group, gender, and subscription status
 - Customer loyalty (purchase frequency, most loyal customers)
@@ -59,7 +62,7 @@ Queries in `customer_shopping_behavior_analysis.sql` cover:
 
 ## Power BI Dashboard
 
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](reports/screenshots/dashboard.png)
 
 A single-page "Customer Behavior Dashboard" featuring:
 - KPI cards: number of customers, average purchase amount, average review rating
@@ -83,3 +86,5 @@ SQL_SERVER_NAME=YOUR_MACHINE\SQLEXPRESS
 ```
 
 or edit the default directly in the connection cell.
+
+If a `.ipynb_checkpoints/` folder ends up in the repo, it's safe to delete and add to `.gitignore` — it's just an auto-saved Jupyter backup, not part of the project.
